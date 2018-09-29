@@ -1,5 +1,4 @@
 {% set version = '0.6-28' %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,24 +9,25 @@ package:
 source:
   fn: latticeExtra_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/latticeExtra_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/latticeExtra/latticeExtra_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/latticeExtra_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/latticeExtra/latticeExtra_{{ version }}.tar.gz
   sha256: 780695323dfadac108fb27000011c734e2927b1e0f069f247d65d27994c67ec2
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
     - r-rcolorbrewer
     - r-lattice
-
   run:
     - r-base
     - r-rcolorbrewer
@@ -35,7 +35,7 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('latticeExtra')"  # [not win]
+    - $R -e "library('latticeExtra')"           # [not win]
     - "\"%R%\" -e \"library('latticeExtra')\""  # [win]
 
 about:
@@ -45,8 +45,14 @@ about:
     several new high-level functions and methods, as well as additional utilities such
     as panel and axis annotation functions.
   license_family: GPL3
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
 
 extra:
   recipe-maintainers:
     - johanneskoester
     - bgruening
+    - daler
+    - jdblischak
+    - cbrueffer
+    - dbast
