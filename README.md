@@ -14,9 +14,8 @@ Summary: Building on the infrastructure provided by the lattice package, this pa
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-latticeextra-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-latticeextra-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-latticeextra-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-latticeextra-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-latticeextra-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-latticeextra-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-latticeextra-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-latticeextra-feedstock)
 
 Current release info
 ====================
