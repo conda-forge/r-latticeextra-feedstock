@@ -43,7 +43,7 @@ test:
 
 about:
   home: http://latticeextra.r-forge.r-project.org/
-  license: GPL-2
+  license: GPL-2.0-or-later
   summary: Building on the infrastructure provided by the lattice package, this package provides
     several new high-level functions and methods, as well as additional utilities such
     as panel and axis annotation functions.
