@@ -23,15 +23,20 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-mass
     - r-rcolorbrewer
+    - r-interp
     - r-jpeg
     - r-lattice
     - r-png
   run:
     - r-base
+    - r-mass
     - r-rcolorbrewer
+    - r-interp
     - r-jpeg
     - r-lattice
     - r-png
