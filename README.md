@@ -1,11 +1,11 @@
-About r-latticeextra
-====================
+About r-latticeextra-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-latticeextra-feedstock/blob/main/LICENSE.txt)
 
 Home: http://latticeextra.r-forge.r-project.org/
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-latticeextra-feedstock/blob/main/LICENSE.txt)
 
 Summary: Building on the infrastructure provided by the lattice package, this package provides several new high-level functions and methods, as well as additional utilities such as panel and axis annotation functions.
 
