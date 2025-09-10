@@ -1,4 +1,4 @@
-{% set version = "0.6-30" %}
+{% set version = "0.6-31" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/latticeExtra_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/latticeExtra/latticeExtra_{{ version }}.tar.gz
-  sha256: c550a76913624818482bf237d48883c58e368ba356ced8ed5e76146672279eed
+  sha256: be69d8014bf722fab00d1afc7a8b515fdba65b25c7700ef44d76f092c5b6e66e
 
 build:
-  number: 4
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
